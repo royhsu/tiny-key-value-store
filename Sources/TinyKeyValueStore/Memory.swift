@@ -4,11 +4,11 @@
 /// Use this if you don't need to keep data persisntently. It's useful in testing.
 public final class Memory<Key, Value> where Key: Hashable {
     
-    private var dictionary: Dictionary<Key, Value>
+    private var storage: Dictionary<Key, Value>
     
     public init(dictionary: Dictionary<Key, Value> = [:]) {
         
-        self.dictionary = dictionary
+        self.storage = dictionary
         
     }
     
@@ -32,9 +32,9 @@ extension Memory: KeyValueStore {
     
     public subscript(key: Key) -> Value? {
         
-        get { dictionary[key] }
+        get { storage[key] }
         
-        set { dictionary[key] = newValue }
+        set { storage[key] = newValue }
         
     }
     

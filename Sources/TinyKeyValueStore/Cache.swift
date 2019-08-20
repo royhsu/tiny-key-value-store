@@ -2,6 +2,7 @@
 
 import Foundation
 
+/// A convenient wrapper around Foundation's NSCache.
 public final class Cache<Key, Value> where Key: Hashable {
     
     private let storage = NSCache<BridgedKey, BridgedValue>()
