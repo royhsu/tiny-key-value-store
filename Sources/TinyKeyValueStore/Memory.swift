@@ -1,5 +1,7 @@
 // MARK: - Memory
 
+/// A convenient wrapper around dictionary.
+/// Use this if you don't need to keep data persisntently. It's useful in testing.
 public final class Memory<Key, Value> where Key: Hashable {
     
     private var dictionary: Dictionary<Key, Value>
