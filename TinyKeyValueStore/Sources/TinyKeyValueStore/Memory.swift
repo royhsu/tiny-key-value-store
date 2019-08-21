@@ -32,7 +32,7 @@ extension Memory: KeyValueStore {
     
     public subscript(key: Key) -> Value? {
         
-        get { storage[key] }
+        get { return storage[key] }
         
         set { storage[key] = newValue }
         

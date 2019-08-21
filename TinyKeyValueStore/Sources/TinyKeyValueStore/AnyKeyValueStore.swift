@@ -26,7 +26,7 @@ extension AnyKeyValueStore: KeyValueStore {
     
     public subscript(key: Key) -> Value? {
         
-        get { _get(key) }
+        get { return _get(key) }
         
         set { _set(newValue, key) }
         

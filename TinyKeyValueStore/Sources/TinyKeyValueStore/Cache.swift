@@ -33,7 +33,11 @@ extension Cache: KeyValueStore {
     
     public subscript(key: Key) -> Value? {
         
-        get { storage.object(forKey: BridgedKey(rawValue: key))?.rawValue }
+        get {
+            
+            return storage.object(forKey: BridgedKey(rawValue: key))?.rawValue
+            
+        }
         
         set {
             

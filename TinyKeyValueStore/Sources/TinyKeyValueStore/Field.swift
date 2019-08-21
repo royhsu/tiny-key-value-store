@@ -24,7 +24,7 @@ extension Field {
     
     public var wrappedValue: Value? {
         
-        get { store[name] }
+        get { return store[name] }
         
         nonmutating set { store[name] = newValue }
         
